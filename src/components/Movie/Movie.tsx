@@ -1,5 +1,6 @@
 import { FC } from "react";
 import type { Movie } from "@/types";
+import Button from "@/components/UI/Button/Button";
 
 type MovieProps = {
 	movie: Movie;
@@ -23,9 +24,7 @@ const Movie: FC<MovieProps> = ({ movie }) => {
 					<a href="#">{movie.title}</a>
 				</h3>
 				<div className="flex justify-center">
-					<button className="bg-sky-500 hover:bg-sky-600 text-white p-2 rounded-md mt-2 w-[140px]">
-						Read More
-					</button>
+					<Button link={`https://www.imdb.com/title/${movie.imdbId}`}>Read More</Button>
 				</div>
 			</div>
 		</div>

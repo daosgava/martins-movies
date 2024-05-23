@@ -5,7 +5,7 @@ const Header = () => (
 				Martin&apos;s Movie Finder
 			</h2>
 			<p className="hidden md:block mt-6 text-lg leading-8 text-white">
-				Explore & Discover Movies
+				Explore and Discover Movies
 			</p>
 		</div>
 	</div>
