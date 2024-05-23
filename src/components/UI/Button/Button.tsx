@@ -16,7 +16,11 @@ const Button: FC<ButtonProps> = ({ movieId, children }) => {
 		try {
 			setIsLoading(true);
 			const movieDetail = await fetchMovieDetails(movieId);
-			if (!("imdb_id" in movieDetail) || movieDetail.imdb_id === null)
+			if (
+				!("imdb_id" in movieDetail) ||
+				movieDetail.imdb_id === null ||
+				movieDetail.imdb_id === ""
+			)
 				return;
 			window.open(
 				`https://www.imdb.com/title/${movieDetail.imdb_id}`,

@@ -2,11 +2,11 @@ const ProductListSkeleton = () => {
 	return (
 		<div
 			role="status"
-			className="w-10/12 my-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 animate-pulse"
+			className="my-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
 		>
 			{Array.from({ length: 8 }).map((_, index) => (
 				<div key={index} className="group relative">
-					<div className="aspect-h-1 aspect-w-1 w-full h-[465px] sm:h-100 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75">
+					<div className="aspect-h-1 aspect-w h-[500px] w-[300px] sm:h-100 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75">
 						<svg
 							className="w-10 h-10 text-gray-200 dark:text-gray-600"
 							aria-hidden="true"
