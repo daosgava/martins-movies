@@ -8,20 +8,16 @@ export const fetchMovies = async (keyword: string, page: number) => {
 		`${BASE_URL}/search/movie?query=${keyword}&page=${page}&api_key=${API_KEY}`,
 	);
 	const { results, total_pages } = await res.json();
-	const movies = results.map(async (movie: Movie) => {
-		const details = await fetch(
-			`${BASE_URL}/movie/${movie.id}?api_key=${API_KEY}`,
-		);
-		const { imdb_id } = await details.json();
-		return {
-			...movie,
-			imdbId: imdb_id,
-		};
-	});
-	const moviesWithDetails = await Promise.all(movies);
-
 	return {
-		movies: moviesWithDetails,
+		movies: results,
 		totalPages: total_pages,
 	};
+};
+
+export const fetchMovieDetails = async (id: number) => {
+	const res = await fetch(
+		`${BASE_URL}/movie/${id}?api_key=${API_KEY}`,
+	);
+	const movieDetails = await res.json();
+	return movieDetails;
 };

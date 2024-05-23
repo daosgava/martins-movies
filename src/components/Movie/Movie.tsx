@@ -24,7 +24,7 @@ const Movie: FC<MovieProps> = ({ movie }) => {
 					<a href="#">{movie.title}</a>
 				</h3>
 				<div className="flex justify-center">
-					<Button link={`https://www.imdb.com/title/${movie.imdbId}`}>Read More</Button>
+					<Button movieId={movie.id}>Read More</Button>
 				</div>
 			</div>
 		</div>
