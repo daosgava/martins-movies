@@ -46,7 +46,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 					Previous
 				</a>
 			</div>
-			<div className="hidden md:-mt-px md:flex">
+			<div className="hidden md:-mt-px md:flex max-w-[80%] overflow-scroll">
 				{Array.from({ length: totalPages }, (_, i) => (
 					<a
 						key={i}
