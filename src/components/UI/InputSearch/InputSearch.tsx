@@ -11,8 +11,8 @@ const InputSearch = () => {
 	const handleOnChange = useDebouncedCallback(
 		(e: React.ChangeEvent<HTMLInputElement>) => {
 			const { value } = e.target;
-
 			const params = new URLSearchParams(searchParams);
+			params.set('page', '1');
 			if (value) {
 				params.set("keyword", value);
 			} else {

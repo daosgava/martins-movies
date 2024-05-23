@@ -1,7 +1,9 @@
 import MovieListSkeleton from "@/components/UI/Skeletons/MovieListSkeleton";
 
 const Loading = () => (
-	<MovieListSkeleton/>
+	<>
+		<MovieListSkeleton/>
+	</>
 );
 
 export default Loading;

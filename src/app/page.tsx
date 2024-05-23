@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import MovieList from "@/components/MovieList/MovieList";
-import InputSearch from "@/components/UI/InputSearch/InputSearch";
 import Pagination from "@/components/UI/Pagination/Pagination";
 import { fetchMovies } from "@/lib/movies";
 import Loading from "./loading";
@@ -20,23 +19,16 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
 
 	const { movies, totalPages } = await fetchMovies(keyword, currentPage);
 
+	if (!movies.length) 
+		return (<p className="text-2xl text-center text-slate-300 mt-6">...</p>);
+
 	return (
-		<main className={`flex ${movies.length ? "min-h-screen" : "h-auto"} flex-col items-center justify-between p-16`}>
-			<InputSearch />
-			{
-				!movies.length
-				? <p className="text-2xl text-center text-slate-300 mt-6">No movies found</p>
-				: null
-			}
+		<>
 			<Suspense key={keyword + currentPage} fallback={<Loading />}>
 				<MovieList movies={movies} />
 			</Suspense>
-			{
-				movies.length 
-				? <Pagination totalPages={totalPages} currentPage={currentPage} />
-				: null
-			}
-		</main>
+			<Pagination totalPages={totalPages} currentPage={currentPage} />
+		</>
 	);
 };
 

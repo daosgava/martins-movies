@@ -1,24 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Sections/Header/Header";
+import InputSearch from "@/components/UI/InputSearch/InputSearch";
+import Main from "@/components/Sections/Main/Main";
 
 export const metadata: Metadata = {
 	title: "Martin's Movie Finder",
 	description: "Explore & Discover Movies",
 };
 
-export default function RootLayout({
+const RootLayout = ({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
-}>) {
-	return (
-		<html lang="en">
-			<body>
-				<Header />
+}>) => (
+	<html lang="en">
+		<body>
+			<Header />
+			<Main>
+				<InputSearch />
 				{children}
-			</body>
-		</html>
-	);
-}
+			</Main>
+		</body>
+	</html>
+);
+
+export default RootLayout;

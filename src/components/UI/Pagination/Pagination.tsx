@@ -8,28 +8,28 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 type PaginationProps = {
 	totalPages: number;
-  currentPage: number;
+	currentPage: number;
 };
 
 const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
 
-  const handleArrowClick = (direction: "left" | "right") => {
-    const params = new URLSearchParams(searchParams);
-    if (direction === "left") {
-      params.set("page", String(currentPage - 1));
-    } else {
-      params.set("page", String(currentPage + 1));
-    }
-    window.location.href = `${pathname}?${params.toString()}`;
-  };
+	const handleArrowClick = (direction: "left" | "right") => {
+		const params = new URLSearchParams(searchParams);
+		if (direction === "left") {
+			params.set("page", String(currentPage - 1));
+		} else {
+			params.set("page", String(currentPage + 1));
+		}
+		window.location.href = `${pathname}?${params.toString()}`;
+	};
 
-  const handleNumberClick = (page: number) => {
-    const params = new URLSearchParams(searchParams);
-    params.set("page", String(page));
-    window.location.href = `${pathname}?${params.toString()}`;
-  }
+	const handleNumberClick = (page: number) => {
+		const params = new URLSearchParams(searchParams);
+		params.set("page", String(page));
+		window.location.href = `${pathname}?${params.toString()}`;
+	};
 
 	return (
 		<nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 w-full">
@@ -37,7 +37,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 				<a
 					href="#"
 					className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-          onClick={() => handleArrowClick("left")}
+					onClick={() => handleArrowClick("left")}
 				>
 					<ArrowLongLeftIcon
 						className="mr-3 h-5 w-5 text-gray-400"
@@ -51,7 +51,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 					<a
 						key={i}
 						href="#"
-            onClick={() => handleNumberClick(i + 1)}
+						onClick={() => handleNumberClick(i + 1)}
 						className={`inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium ${
 							i + 1 === currentPage
 								? "text-blue-900"
@@ -65,7 +65,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 			<div className="-mt-px flex w-0 flex-1 justify-end">
 				<a
 					href="#"
-          onClick={() => handleArrowClick("right")}
+					onClick={() => handleArrowClick("right")}
 					className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
 				>
 					Next
