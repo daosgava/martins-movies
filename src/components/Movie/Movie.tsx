@@ -12,7 +12,7 @@ const Movie: FC<MovieProps> = ({ movie }) => {
 				<img
 					src={
 						movie.poster_path
-							? movie.poster_path
+							? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
 							: "https://dummyimage.com/300x500/eeeeee/767676&text=IMAGE+NOT+AVAILABLE"
 					}
 					alt={movie.title}
