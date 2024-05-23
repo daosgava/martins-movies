@@ -13,7 +13,7 @@ type MovieProps = {
 
 const Movie: FC<MovieProps> = ({ movie }) => {
 	return (
-		<div className="group relative bg-blue-900 rounded-xl overflow-hidden">
+		<div className="group relative bg-cyan-600 rounded-xl overflow-hidden">
 			<div className="absolute top-0 left-0 p-2 rounded-bl-xl z-10 opacity-80 group-hover:opacity-100 flex flex-row justify-between w-full transition-opacity duration-300">
 				<Favorite />
 				<Share />
