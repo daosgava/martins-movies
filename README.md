@@ -53,4 +53,7 @@ npm run start
 
 ## Screenshots
 
-
+![Desktop 1](/public/images/1.png)
+![Desktop 1](/public/images/2.png)
+![Desktop 1](/public/images/3.png)
+![Mobile 1](/public/images/4.png)
