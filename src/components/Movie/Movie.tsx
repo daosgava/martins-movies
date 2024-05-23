@@ -28,9 +28,9 @@ const Movie: FC<MovieProps> = ({ movie }) => {
 					}
 					width={300}
 					height={500}
-					quality={100}
+					priority={true}
 					alt={movie.title}
-					className="object-cover object-center opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+					className="h-[500px] w-[300px] opacity-80 group-hover:opacity-100 transition-opacity duration-300"
 				/>
 			</div>
 			<div className="absolute bottom-0 flex flex-col justify-between p-2 w-full h-[46%] bg-gradient-to-t from-slate-900 from-70% group-hover:from-40%  to-transparent">
