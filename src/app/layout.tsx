@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Sections/Header/Header";
 import InputSearch from "@/components/UI/InputSearch/InputSearch";
 import Main from "@/components/Sections/Main/Main";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
 	title: "Martin's Movie Finder",
@@ -18,7 +19,9 @@ const RootLayout = ({
 		<body>
 			<Header />
 			<Main>
-				<InputSearch />
+				<Suspense>
+					<InputSearch />
+				</Suspense>
 				{children}
 			</Main>
 		</body>
