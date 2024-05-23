@@ -36,7 +36,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 			<div className="-mt-px flex w-0 flex-1">
 				<a
 					href="#"
-					className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+					className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-cyan-300 hover:text-gray-700"
 					onClick={() => handleArrowClick("left")}
 				>
 					<ArrowLongLeftIcon
@@ -54,9 +54,9 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 						onClick={() => handleNumberClick(i + 1)}
 						className={`inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium ${
 							i + 1 === currentPage
-								? "text-blue-900"
+								? "text-cyan-500"
 								: "text-gray-500"
-						} hover:border-gray-300 hover:text-gray-700`}
+						} hover:border-cyan-300 hover:text-cyan-700`}
 					>
 						{i + 1}
 					</a>
@@ -66,7 +66,7 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 				<a
 					href="#"
 					onClick={() => handleArrowClick("right")}
-					className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+					className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-cyan-300 hover:text-cyan-700"
 				>
 					Next
 					<ArrowLongRightIcon
