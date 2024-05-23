@@ -16,6 +16,9 @@ const Pagination: FC<PaginationProps> = ({ totalPages, currentPage }) => {
 	const searchParams = useSearchParams();
 
 	const handleArrowClick = (direction: "left" | "right") => {
+		if (direction === "left" && currentPage === 1) return;
+		if (direction === "right" && currentPage === totalPages) return;
+
 		const params = new URLSearchParams(searchParams);
 		if (direction === "left") {
 			params.set("page", String(currentPage - 1));
