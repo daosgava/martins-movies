@@ -5,6 +5,7 @@ import Favorite from "../UI/Icons/Favorite";
 import Share from "../UI/Icons/Share";
 import Star from "../UI/Icons/Star";
 import EmptyStar from "../UI/Icons/EmptyStar";
+import Image from "next/image";
 
 type MovieProps = {
 	movie: Movie;
@@ -13,20 +14,24 @@ type MovieProps = {
 const Movie: FC<MovieProps> = ({ movie }) => {
 	return (
 		<div className="group relative bg-blue-900 rounded-xl overflow-hidden">
-			<div className="absolute top-0 left-0 p-2 rounded-bl-xl z-10 opacity-80 group-hover:opacity-100 flex flex-row justify-between w-full">
+			<div className="absolute top-0 left-0 p-2 rounded-bl-xl z-10 opacity-80 group-hover:opacity-100 flex flex-row justify-between w-full transition-opacity duration-300">
 				<Favorite />
 				<Share />
 			</div>
 
-			<img
-				src={
-					movie.poster_path
-						? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-						: "https://dummyimage.com/300x500/eeeeee/767676&text=No+Image+Available"
-				}
-				alt={movie.title}
-				className="relative h-full w-full object-cover object-center lg:h-full lg:w-full opacity-80 group-hover:opacity-100"
-			/>
+			<div className="h-[500px] w-[300px]">
+				<Image
+					src={
+						movie.poster_path
+							? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+							: "https://dummyimage.com/300x500/eeeeee/767676&text=No+Image+Available"
+					}
+					layout="fill"
+					quality={100}
+					alt={movie.title}
+					className="object-cover object-center opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+				/>
+			</div>
 			<div className="absolute bottom-0 flex flex-col justify-between p-2 w-full h-[46%] bg-gradient-to-t from-slate-900 md:from-70% group-hover:from-20%  to-transparent">
 				<div className="flex justify-center">
 					{Array.from({ length: 5 }).map((_, i) => (
