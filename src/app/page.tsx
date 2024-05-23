@@ -3,7 +3,6 @@ import MovieList from "@/components/MovieList/MovieList";
 import Pagination from "@/components/UI/Pagination/Pagination";
 import { fetchMovies } from "@/lib/movies";
 import Loading from "./loading";
-import { Socket } from "dgram";
 
 type SearchParams = {
 	keyword?: string;
@@ -20,7 +19,7 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
 
 	const { movies, totalPages } = await fetchMovies(keyword, currentPage);
 
-	if (!movies.length) 
+	if (!movies?.length) 
 		return (<p className="text-2xl text-center text-slate-300 mt-6">...</p>);
 
 	return (
