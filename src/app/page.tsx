@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import MovieList from "@/components/MovieList/MovieList";
-import Pagination from "@/components/UI/Pagination/Pagination";
-import { fetchMovies } from "@/lib/movies";
+import MovieList from "../components/MovieList/MovieList";
+import Pagination from "../components/UI/Pagination/Pagination";
+import { fetchMovies } from "../lib/movies";
 import Loading from "./loading";
 
 type SearchParams = {

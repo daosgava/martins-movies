@@ -1,6 +1,6 @@
 import { FC } from "react";
-import type { Movie } from "@/types";
-import Button from "@/components/UI/Button/Button";
+import type { Movie } from "../../types";
+import Button from "../UI/Button/Button";
 import Favorite from "../UI/Icons/Favorite";
 import Share from "../UI/Icons/Share";
 import Star from "../UI/Icons/Star";

@@ -1,4 +1,4 @@
-import MovieListSkeleton from "@/components/UI/Skeletons/MovieListSkeleton";
+import MovieListSkeleton from "../components/UI/Skeletons/MovieListSkeleton";
 
 const Loading = () => (
 	<>

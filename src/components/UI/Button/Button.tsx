@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
-import { fetchMovieDetails } from "@/lib/movies";
+import { fetchMovieDetails } from "../../../lib/movies";
 import Loading from "../Loading/Loading";
 
 type ButtonProps = {

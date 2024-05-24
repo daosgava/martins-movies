@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Sections/Header/Header";
-import InputSearch from "@/components/UI/InputSearch/InputSearch";
-import Main from "@/components/Sections/Main/Main";
+import Header from "../components/Sections/Header/Header";
+import InputSearch from "../components/UI/InputSearch/InputSearch";
+import Main from "../components/Sections/Main/Main";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {

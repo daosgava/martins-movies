@@ -1,5 +1,5 @@
 import { FC } from "react";
-import type { Movie } from "@/types";
+import type { Movie } from "../../types";
 import MovieComponent from "../Movie/Movie";
 
 type MovieListProps = {
