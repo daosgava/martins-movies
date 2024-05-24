@@ -62,7 +62,18 @@ npm run report
 
 ## Screenshots
 
+### Header
+
 ![Desktop 1](/public/images/1.png)
+
+### Search Results
+
 ![Desktop 1](/public/images/2.png)
+
+### Pagination
+
 ![Desktop 1](/public/images/3.png)
+
+### Mobile
+
 ![Mobile 1](/public/images/4.png)
