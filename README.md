@@ -51,6 +51,15 @@ npm run build
 npm run start
 ```
 
+## End-To-End Testing
+
+Playwright will simulate a user navigating the application using three browsers: Chromium, Firefox and Webkit, this requires the Next.js server to be running.
+
+```bash
+npm run test
+npm run report
+```
+
 ## Screenshots
 
 ![Desktop 1](/public/images/1.png)
