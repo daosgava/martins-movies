@@ -13,8 +13,8 @@ type MovieProps = {
 
 const Movie: FC<MovieProps> = ({ movie }) => {
 	return (
-		<div className="group relative bg-cyan-600 rounded-xl overflow-hidden">
-			<div className="absolute top-0 left-0 p-2 rounded-bl-xl z-10 opacity-80 group-hover:opacity-100 flex flex-row justify-between w-full">
+		<div className="group relative bg-slate-900 rounded-xl overflow-hidden">
+			<div className="absolute flex flex-row justify-between w-full top-0 left-0 p-2 rounded-bl-xl z-10 opacity-80 group-hover:opacity-100 transition-all duration-200 ease-out">
 				<Favorite />
 				<Share />
 			</div>
@@ -30,7 +30,7 @@ const Movie: FC<MovieProps> = ({ movie }) => {
 					height={500}
 					priority={true}
 					alt={movie.title}
-					className="h-[500px] w-[300px] opacity-60 group-hover:opacity-100"
+					className="h-[500px] w-[300px] opacity-80 group-hover:opacity-100 transition-all duration-200 ease-out"
 				/>
 			</div>
 			<div className="absolute bottom-0 flex flex-col justify-between p-2 w-full h-[46%] bg-gradient-to-t from-slate-900 from-70% group-hover:from-40% to-transparent">

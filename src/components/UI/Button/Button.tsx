@@ -35,7 +35,7 @@ const Button: FC<ButtonProps> = ({ movieId, children }) => {
 
 	return (
 		<button
-			className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-sky-600 hover:to-blue-600 text-white p-2 rounded-md mt-2 w-[140px]"
+			className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-sky-600 hover:to-blue-600 text-white p-2 rounded-lg mt-2 w-[140px]"
 			onClick={handleClick}
 		>
 			{isLoading ? <Loading /> : children}
