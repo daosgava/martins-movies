@@ -1,7 +1,7 @@
-# Martin's Movies
+# Movie Finder
 
 ## Description
-Martin's Movies is a web application that allows users to search movies. It provides pagination, pulled dynamically from The Movie Database (TMDb) API, and supports searching by keyword. Built using Next.js, Tailwind CSS, and TypeScript.
+This is a web application that allows users to search movies. It provides pagination, pulled dynamically from The Movie Database (TMDb) API, and supports searching by keyword. Built using Next.js, Tailwind CSS, and TypeScript.
 
 ## Features
 - **Movie Listings**: Browse all movies in a paginated format.
