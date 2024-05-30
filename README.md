@@ -74,6 +74,6 @@ npm run report
 
 ![Desktop 1](/public/images/3.png)
 
-### Mobile
+### Mobile Layout
 
 ![Mobile 1](/public/images/4.png)
