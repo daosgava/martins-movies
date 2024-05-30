@@ -19,8 +19,8 @@ This is a web application that allows users to search movies. It provides pagina
 Clone the repository and install dependencies.
 
 ```bash
-git clone https://github.com/daosgava/martins-movies.git
-cd martins-movies
+git clone https://github.com/daosgava/movie-finder.git
+cd movie-finder
 npm install
 ```
 
